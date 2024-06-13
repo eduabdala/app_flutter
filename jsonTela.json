@@ -1,0 +1,20 @@
+{
+    "titulo": "Tela Dinâmica",
+    "elementos": [
+      {
+        "tipo": "texto",
+        "conteudo": "Bem-vindo à tela dinâmica!"
+      },
+      {
+        "tipo": "button",
+        "texto": "Próxima Página",
+        "acao": "abrir_proxima_pagina"
+      },
+      {
+        "tipo": "button",
+        "texto": "Próxima Página",
+        "acao": "abrir_proxima_pagina"
+      }
+    ]
+}
+  
