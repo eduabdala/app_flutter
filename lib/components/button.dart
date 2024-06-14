@@ -5,11 +5,15 @@ import '../services/python_service.dart';
 class ButtonComponent extends StatelessWidget {
   final Component component;
 
-  ButtonComponent({required this.component});
+  const ButtonComponent({super.key, required this.component});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+      ),
       onPressed: () {
         if (component.action?['type'] == 'navigate') {
           String targetScreenId = component.action!['target'];

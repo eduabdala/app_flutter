@@ -11,30 +11,38 @@ class ProductScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Produtos'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        title: const Text('Produtos'),
       ),
-      body: ListView(
-        children: [
-          ...screens.map((screen) {
-            return ListTile(
-              title: Text(screen.title),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DynamicScreen(screen: screen),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ...screens.map((screen) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DynamicScreen(screen: screen),
+                        ),
+                      );
+                    },
+                    child: Text(screen.title),
                   ),
                 );
-              },
-            );
-          }).toList(),
-          ListTile(
-            title: Text('Tela 4'),
-            onTap: () {
-              Navigator.pushNamed(context, '/tela4');
-            },
+              }).toList(),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

@@ -3,7 +3,6 @@ import 'models/json_loader.dart';
 import 'models/screen.dart';
 import 'screens/dynamic_screen.dart';
 import 'screens/product_screen.dart';
-import 'screens/custom_screens/tela4.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
       home: ProductScreen(screens: screens),
       routes: {
         for (var screen in screens) '/${screen.id}': (context) => DynamicScreen(screen: screen),
-        '/tela4': (context) => Tela4(),
+        
       },
     );
   }

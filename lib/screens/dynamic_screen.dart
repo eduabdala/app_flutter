@@ -11,11 +11,31 @@ class DynamicScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
         title: Text(screen.title),
       ),
-      body: SingleChildScrollView(
+      body: Center(
         child: Column(
-          children: screen.components.map((component) => ComponentFactory.createComponent(component, context)).toList(),
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Spacer(),
+            SingleChildScrollView(
+              child: Column(
+                children: screen.components.map((component) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: SizedBox(
+                      width: 150, // Set the desired fixed width for all components
+                      child: ComponentFactory.createComponent(component, context),
+                    ),
+                  );
+                }).toList(),
+              ),
+            ),
+            Spacer(),
+          ],
         ),
       ),
     );

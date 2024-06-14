@@ -1,0 +1,16 @@
+{
+    "id": "tela1",
+    "title": "Thermal Printer",
+    "components": [
+      {
+        "type": "button",
+        "content": {"label": "ESCP"},
+        "action": {"type": "navigate", "target": "lib/assets/screens_json/thermalPrinter/escp.json"}
+      },
+      {
+        "type": "button",
+        "content": {"label": "ESCPOS"},
+        "action": {"type": "navigate", "target": "tela2"}
+      }
+    ]
+  }

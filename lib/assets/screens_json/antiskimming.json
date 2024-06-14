@@ -1,15 +1,15 @@
 {
     "id": "tela1",
-    "title": "Tela 1",
+    "title": "Antiskimming",
     "components": [
       {
         "type": "text",
-        "content": {"text": "Bem-vindo à Tela 1"},
-        "style": {"fontSize": 24, "color": "#FF5733"}
+        "content": {"text": "Antiskimming - SU"},
+        "style": {"fontSize": 24}
       },
       {
         "type": "button",
-        "content": {"label": "Ir para Tela 2"},
+        "content": {"label": "Antiskimming - SU"},
         "action": {"type": "navigate", "target": "tela2"}
       }
     ]

@@ -1,0 +1,21 @@
+{
+    "id": "escp",
+    "title": "Impressora de Recipos - ATM (ESCP)",
+    "components": [
+      {
+        "type": "textfield",
+        "content": {"label":"teste", "hint":"teste"}
+        
+      },
+      {
+        "type": "button",
+        "content": {"label": "ESCP"},
+        "action": {"type": "navigate", "target": "escp"}
+      },
+      {
+        "type": "button",
+        "content": {"label": "ESCPOS"},
+        "action": {"type": "navigate", "target": "tela2"}
+      }
+    ]
+  }
