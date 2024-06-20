@@ -5,7 +5,7 @@
       {
         "type": "button",
         "content": {"label": "ESCP"},
-        "action": {"type": "navigate", "target": "lib/assets/screens_json/thermalPrinter/escp.json"}
+        "action": {"type": "navigate", "target": "thermal_printer_escp"}
       },
       {
         "type": "button",
